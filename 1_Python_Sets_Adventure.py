@@ -16,17 +16,17 @@ competitor_routes = {"JFK", "CDG", "IAH", "LHR", "BKK", "HOU", "SAT", "SAF", "OR
 
 def common_destinations(set_1, set_2):
     new_set = set_1.intersection(set_2)
-    print("\033[7mCommon Destinations:\033[0m")
+    print("\n\033[7mCommon Destinations:\033[0m")
     print_destinations(new_set)
 
 def our_unique_destinations(set_1, set_2):
     new_set = set_1.difference(set_2)
-    print("\033[7mOur Unique Destinations:\033[0m")
+    print("\n\033[7mOur Unique Destinations:\033[0m")
     print_destinations(new_set)
 
 def unshared_destinations(set_1, set_2):
     new_set = set_1.symmetric_difference(set_2)
-    print("\033[7mDestinations Not Shared By Us Or Competitor:\033[0m")
+    print("\n\033[7mDestinations Not Shared By Us Or Competitor:\033[0m")
     print_destinations(new_set)
 
 def print_destinations(output_set):
@@ -50,4 +50,4 @@ while True:
     elif choice == '4':
         break
     else:
-        print("\033[7mInvalid choice. Please try again.\033[0m")
+        print("\nInvalid choice. Please try again.")
