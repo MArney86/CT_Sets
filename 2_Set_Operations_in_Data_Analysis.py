@@ -1,27 +1,21 @@
-#2. Set Operations in Data Analysis
-#Objective: The aim of this assignment is to enhance your skills in using Python sets for data analysis tasks. You will apply various set operations to handle real-world data scenarios, focusing on their practical application and efficiency.
+def print_unique_ids(customer_ids): #function to print the unique ids nicely
+    unique_ids = {id for id in customer_ids} #set comprehension to create a set of unique customer ids from the list of customer ids
 
-#Task 1: Duplicate Entries Cleanup You are given a list of customer IDs, some of which are duplicated. Write a Python script to remove duplicates and display the unique customer IDs.
+    print("\n\033[7m Unique Customer IDs:\033[0m") #Header list of unique ids
+    for customer_id in sorted(unique_ids): #iterate through the sorted set of unique ids
+        print(f" - {customer_id}") #print the customer id in a formatted manner
 
-#Example Code:
-def print_unique_ids(customer_ids):
-    unique_ids = {id for id in customer_ids}
+customer_ids = ["CID001", "CID002", "CID003", "CID002", "CID001", "CID004", "CID005", "CID006", "CID004", "CID007"] #list of customer ids
 
-    print("\n\033[7m Unique Customer IDs:\033[0m")
-    for customer_id in sorted(unique_ids):
-        print(f" - {customer_id}")
+while True: #loop for program menu
+    print("\nCustomer ID cleanup") #Heading for menu
+    print("1 - Cleanup duplicates") #option 1
+    print("2 - Exit") #exit option
+    choice = input("Enter your choice: ") #choice input from user
 
-customer_ids = ["CID001", "CID002", "CID003", "CID002", "CID001", "CID004", "CID005", "CID006", "CID004", "CID007"]
-
-while True:
-    print("\nCustomer ID cleanup")
-    print("1 - Cleanup duplicates")
-    print("2 - Exit")
-    choice = input("Enter your choice: ")
-
-    if choice == '1':
-        print_unique_ids(customer_ids)
-    elif choice == '2':
-        break
-    else:
-        print("\nInvalid choice: Please try again.")
+    if choice == '1': #test if choice is '1'
+        print_unique_ids(customer_ids) # run print_unique_ids()
+    elif choice == '2': #test if choice is '2'
+        break #leave loop and program
+    else: #invalid choice
+        print("\nInvalid choice: Please try again.") #notify user of invalid choice
