@@ -1,3 +1,4 @@
+#Task 1:
 def print_unique_ids(customer_ids): #function to print the unique ids nicely
     unique_ids = {id for id in customer_ids} #set comprehension to create a set of unique customer ids from the list of customer ids
 
@@ -8,9 +9,9 @@ def print_unique_ids(customer_ids): #function to print the unique ids nicely
 customer_ids = ["CID001", "CID002", "CID003", "CID002", "CID001", "CID004", "CID005", "CID006", "CID004", "CID007"] #list of customer ids
 
 while True: #loop for program menu
-    print("\nCustomer ID cleanup") #Heading for menu
-    print("1 - Cleanup duplicates") #option 1
-    print("2 - Exit") #exit option
+    print('''\nCustomer ID cleanup
+1 - Cleanup duplicates
+2 - Exit''')
     choice = input("Enter your choice: ") #choice input from user
 
     if choice == '1': #test if choice is '1'

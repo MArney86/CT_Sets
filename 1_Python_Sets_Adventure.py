@@ -1,3 +1,4 @@
+#Task 1:
 def common_destinations(set_1, set_2): #function to find destinations common between us and competitor
     new_set = set_1.intersection(set_2) #intersection to find common destinations
     print("\n\033[7mCommon Destinations:\033[0m") #Heading for list of destinations
@@ -21,11 +22,11 @@ our_routes = {"LAX", "JFK", "CDG", "DXB", "IAH", "SAN", "SDP", "SBA", "SAF", "MD
 competitor_routes = {"JFK", "CDG", "IAH", "LHR", "BKK", "HOU", "SAT", "SAF", "ORD", "MDW", "LGA", "SLW"} #set of competitor's destinations
 
 while True: #loop for program menu
-    print("\033[1m\nMenu:") #heading
-    print("1: Common Destinations between us and competitor") #first choice
-    print("2: Destinations unique to us only") #second choice
-    print("3: Destinations not shared between us and competitor") #third choice
-    print("4: Exit") #exit
+    print('''\033[1m\nMenu:
+1: Common Destinations between us and competitor
+2: Destinations unique to us only
+3: Destinations not shared between us and competitor
+4: Exit''')
     choice = input("Enter your choice: \033[0m") #choice input from user
     if choice == '1': #test if choice is '1'
         common_destinations(our_routes, competitor_routes) #call common_destinations()
